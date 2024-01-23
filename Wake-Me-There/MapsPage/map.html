@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map with Loading Indicator</title>
+    <link rel="stylesheet" href="map.css">
+    <script src="map.js" defer></script>
+</head>
+
+
+
+
+
+<body>
+
+    <div class="alert_on" style="display: none;">
+        <div class="alert_container">
+            <img src="../Src/siren.gif">
+            <h4>Destination reached</h4>
+            <button onclick="StopSiren()">Stop</button>
+            <audio src="" controls autoplay style="display:none" loop ></audio>
+        </div>
+    </div>
+    <!-- for fullscreen -->
+    <div class="fullscreenbox" style="display: none;">
+        <p>It is recommended to use in fullscreen mod</p>
+        <button class="fullscnbtn setfullscn">Set full screen</button><button class="fullscnbtn skipbtn">Skip</button>
+    </div>
+
+    <!-- for loadingdesign -->
+    <div id="loadingIndicator">Loading...</div>
+
+    <div class="mymapdiv">
+        <div class="dismeter"
+            style="position: absolute;margin-left: 10px; padding: 20px; background-color: white;z-index: 5; margin-top: 60px; border-top: green 2px solid;">
+            ...
+        </div>
+        <div id="myMap" style="position: relative;width:100%;min-width:290px;height:100vh;background-color:gray">
+        </div>
+    </div>
+
+    <div class="loader">
+        <li class="ball"></li>
+        <li class="ball"></li>
+        <li class="ball"></li>
+    </div>
+
+    <!-- backbutton -->
+    <div class="mapback Start-Button startbtncl"
+        style="position: fixed; left: 50%; top: 90%; transform: translate(-50%, -50%);">
+        ◀ back
+    </div>
+
+
+
+    <!-- for API distance calculation -->
+    <div id='directionsItinerary' style="display: none;"></div>
+</body>
+
+</html>

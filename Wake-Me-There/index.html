@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wake @ there</title>
+    <link rel="stylesheet" href="IndexPage/style.css">
+    <!--cdn links-->
+    <script src="https://kit.fontawesome.com/8b49705880.js" crossorigin="anonymous"></script>
+    <script src="IndexPage/script.js" defer></script>
+</head>
+
+
+
+<body>
+
+
+
+
+    <!-- navbar -->
+    <div class="nav">
+        <div class="Nav-stick">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="black" fill-opacity="1" d="M0,224L1440,288L1440,0L0,0Z"></path>
+            </svg>
+            <h2>
+                <i class="fa-solid fa-location-arrow fa-flip-vertical"></i>
+                <span>W</span>ake Me there
+            </h2>
+        </div>
+
+
+        <div class="side_bar">
+            
+            <div class="side_bar_contents">
+                <a></a>
+                <a></a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- container -->
+    <div class="flexbox">
+        <div class="Input-Box">
+
+            <label for="starting-pos">
+                Origin
+            </label>
+
+            <input readonly class="input" name="text" placeholder="Search..." type="search" id="starting-pos"
+                value="Your-location">
+
+            <br><br>
+
+            <div id='searchBoxContainer'
+                style="width: 100%; display: flex ; align-items: center; flex-direction: column;">
+                <label for="dest">
+                    Destination*
+                </label>
+                <input class="input dest" name="text" placeholder="Example erode..." type="search" id="searchBox">
+            </div>
+
+            <br><br>
+
+            <label for="range">
+                Range For prealarm*
+            </label>
+
+
+            <div class="range-input">
+                <input class="input" name="text" placeholder="example(20)..." type="text" id="range">
+                <select name="distanceUnit" id="distanceUnit">
+                    <option value="KM">Kilometers</option>
+                    <option value="Meter">Meters</option>
+                </select>
+            </div>
+
+            <br><br>
+
+            <button id="options">Options</button>
+
+            <br>
+
+            <button id="set">SET</button>
+        </div>
+
+
+
+
+        <div class="Writing-Content">
+            <div class="card">
+                <div class="bold">
+                    "Wake Me @ There 🚩" is your ultimate travel companion!.
+                </div>
+                <div class="lighter"></div>
+            </div>
+            <div class="Start-Buttons">
+                <button id="startbtn" class="startbtncl">Get Started!</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Options portion -->
+
+    <div id="optionsdiv" style="display: none;">
+        <div class="op-content">
+            <i class="fa-solid fa-square-xmark" style="color: #04070b; margin-left: auto;"></i>
+            <div class="musicdiv">
+                <h2>Music:</h2>
+                <select name="" id="musicselect">
+                    <option value="Retro">Retro</option>
+                    <option value="Vintage">Vintage</option>
+                    <option value="Spaceshooter">Spaceshooter</option>
+                    <option value="Slot">retro</option>
+
+
+                </select>
+            </div>
+            <div class="vibrationdiv">
+                <h2>Vibration Level:</h2>
+                <select name="" id="vibrationselect">
+                    <option value="300">300</option>
+                    <option value="600">600</option>
+                    <option value="0">OFF</option>
+                </select>
+            </div>
+            <button id="divoptions">Ok</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Dynamic load the Bing Maps Key and Script
+        // Get your own Bing Maps key at https://www.microsoft.com/maps
+        // Dynamic load the Bing Maps Script with your key
+        const bingKey = "AgEPS9jspIBwBSS-c2SNyiq6jIadG5Kx_MdYlLJAfZl5fnZlp0JzAoWmHSDsjuQs";
+        let script = document.createElement("script");
+        script.setAttribute("src", `https://www.bing.com/api/maps/mapcontrol?callback=GetMa&key=${bingKey}`);
+        document.body.appendChild(script);
+    </script>
+</body>
+
+</html>
