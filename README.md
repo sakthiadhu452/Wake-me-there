@@ -15,7 +15,9 @@ So here i created my project where it asks for their for customer's location and
 ##### Stacks i have used
 
 * HTML
-*CSS
-*JAVASCRIPT
-*BING MAPS API
+* CSS
+* JAVASCRIPT
+* BING MAPS API
+
+
 
