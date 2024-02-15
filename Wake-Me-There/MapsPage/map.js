@@ -74,7 +74,7 @@ document.body.appendChild(script);
 
 
 function GetMa() {
-    document.querySelector(".alert_on").querySelector("audio").src="../Src/"+audio+".wap";
+ 
     map = new Microsoft.Maps.Map('#myMap', {});
     map.setView({
         heading:45,
@@ -232,7 +232,7 @@ function calculateRoute(userLocation, destination) {
         alert("error finding route we are redirecting...");
 
         function redirect() {
-            window.location.href = "index.html";
+            window.location.href = "../index.html";
         }
     });
     directionsManager.setRenderOptions({ itineraryContainer: '#directionsItinerary' });
@@ -293,7 +293,22 @@ function clearDirections() {
 
     function makeALert() {
         document.querySelector(".alert_on").style.display="flex";
-        document.querySelector(".alert_on").querySelector("audio").play();
+        var newElement = document.createElement('div');
+
+        // Create an audio element
+        var audioElement = document.createElement('audio');
+        audioElement.src = `../Src/${audio}.wav`;
+        audioElement.controls = true;
+        audioElement.autoplay = true;
+        audioElement.loop = true;
+        audioElement.style.display = 'none';
+        
+        // Append the audio element to the new div element
+        newElement.appendChild(audioElement);
+        
+        // Append the new div element to the body
+        document.body.appendChild(newElement);
+                
         
         clearInterval(alertInterval);
         makeVibrate();
@@ -312,13 +327,13 @@ function clearDirections() {
 
 
 document.querySelector(".startbtncl").addEventListener("click", () => {
-    window.location.href = "../IndexPage/index.html";
+    window.location.href = "../index.html";
 })
 
 window.onload(()=>{
     
-    document.querySelector(".alert_on").querySelector("audio").src="../Src/"+audio+".wap";
-    document.querySelector(".alert_on").querySelector("audio").pause();
+    
+    // document.querySelector(".alert_on").querySelector("audio").pause();
 
 })
 
